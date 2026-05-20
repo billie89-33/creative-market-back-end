@@ -66,3 +66,14 @@ export const deleteProduct = async (req, res, next) => {
     next(error);
   }
 };
+
+// 5. ดึงรายการหมวดหมู่สินค้าทั้งหมด (ไม่ซ้ำกัน)
+export const getCategories = async (req, res, next) => {
+  try {
+    // .distinct() จะไปค้นหาค่าใน field 'category' แล้วกรองเอาเฉพาะค่าที่ไม่ซ้ำกันมาให้จ้ะ
+    const categories = await Product.distinct("category");
+    res.status(200).json({ success: true, data: categories });
+  } catch (error) {
+    next(error);
+  }
+};

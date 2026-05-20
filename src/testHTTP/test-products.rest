@@ -36,3 +36,6 @@ Content-Type: application/json
 
 ### Delete
 DELETE http://localhost:7777/api/products/6a0d57f760d284590d602fa9
+
+### GET CATEGORIES
+GET http://localhost:7777/api/products/categories

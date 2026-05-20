@@ -4,9 +4,13 @@ import {
   createProduct,
   updateProduct,
   deleteProduct,
+  getCategories,
 } from "../modules/products/product.controller.js";
 
 export const router = express.Router();
+
+//ถ้าวางไว้ข้างล่าง Mongoose จะเข้าใจผิดว่าคำว่า "categories" คือ "ID" ของสินค้าตัวหนึ่ง แล้วมันจะพยายามเอาคำว่า "categories" ไปค้นหาในฐานข้อมูล ซึ่งจะทำให้เกิด Error
+router.get("/categories", getCategories);
 
 router.get("/", getProducts);
 
