@@ -1,3 +1,6 @@
+### ดูตะกร้าของ user
+GET http://localhost:7777/api/cart/user_123
+
 ### เพิ่มสินค้าลงตะกร้า 
 POST http://localhost:7777/api/cart/add
 Content-Type: application/json
