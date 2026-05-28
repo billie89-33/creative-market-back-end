@@ -19,6 +19,14 @@ app.use(express.static("public")); // will remove after upload to cloud
 
 app.use("/api", apiRoutes);
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Welcome to Creative Market API Server 🚀",
+    status: "Healthy",
+  });
+});
+
 app.use((error, req, res, next) => {
   console.error(error.stack);
   res.status(error.status || 500).json({
