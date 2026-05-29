@@ -9,7 +9,8 @@ POST http://localhost:7777/api/cart/add
 Content-Type: application/json
 
 {
-  "productId": "6a0d57f760d284590d602fa9", 
+  "userId": "user_123",
+  "productId": "6a17c381d7b9296b299277da", 
   "quantity": 1
 }
 
