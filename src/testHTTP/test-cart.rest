@@ -16,6 +16,7 @@ Content-Type: application/json
 GET http://localhost:7777/api/cart/
 
 ### 3. เพิ่มสินค้าลงตะกร้า (Add Item)
+# Logic: บวกเพิ่มจากของเดิม (Increment: Current + New)
 POST http://localhost:7777/api/cart/add
 Content-Type: application/json
 
@@ -25,12 +26,13 @@ Content-Type: application/json
 }
 
 ### 4. อัปเดตจำนวนสินค้า (Update Item)
-PUT http://localhost:7777/api/cart/update
+# Logic: แทนที่ด้วยจำนวนที่ระบุ (Set: Replace with New Value)
+PATCH http://localhost:7777/api/cart/update
 Content-Type: application/json
 
 {
   "productId": "6a1685fc96d193295d2a496a", 
-  "quantity": 3
+  "quantity": 5
 }
 
 ### 5. ลบสินค้า 1 ชิ้นออกจากตะกร้า (Remove Item)

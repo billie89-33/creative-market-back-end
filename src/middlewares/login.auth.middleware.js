@@ -28,3 +28,5 @@ export const requireRole = (allowedRoles) => {
     next();
   };
 };
+
+export default { verifyToken, requireRole };
